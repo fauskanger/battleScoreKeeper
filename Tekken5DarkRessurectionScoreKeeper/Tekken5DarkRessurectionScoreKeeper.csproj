@@ -90,8 +90,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tekkenmillioncolor.ico" />
     <None Include="Resources\tekkenCharSelection.png" />
+    <None Include="Resources\tekkenmillioncolor.ico" />
     <Content Include="tekken.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

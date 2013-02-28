@@ -16,5 +16,33 @@ namespace Tekken5DarkRessurectionScoreKeeper
         {
             InitializeComponent();
         }
+
+        private int charImgWidth = 1085 / 12;
+        private int charImgHeight = 264 / 3;
+
+        private int X;
+        private int Y;
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            label1.Text = X.ToString();
+            label2.Text = Y.ToString();
+
+            if ((X != 1 && Y != 1) && !(X > 12 || Y > 3))
+            {
+
+            }
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            X = e.X/charImgWidth+1;
+            Y = e.Y/charImgHeight+1;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
