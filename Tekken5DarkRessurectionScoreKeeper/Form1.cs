@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using FauskangerLib;
+
 namespace Tekken5DarkRessurectionScoreKeeper
 {
     public partial class Form1 : Form
@@ -25,12 +27,14 @@ namespace Tekken5DarkRessurectionScoreKeeper
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            label1.Text = X.ToString();
-            label2.Text = Y.ToString();
-
-            if ((X != 1 && Y != 1) && !(X > 12 || Y > 3))
+            if (Calc.isInRange(X, 1, 12) && Calc.isInRange(Y, 1, 3) && (X != 1 || Y != 1))
             {
-
+                label1.Text = X.ToString();
+                label2.Text = Y.ToString();
+            }
+            else
+            {
+                label1.Text = label2.Text = "?";
             }
         }
 

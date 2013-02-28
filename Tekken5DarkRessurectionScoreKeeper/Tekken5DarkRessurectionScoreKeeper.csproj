@@ -94,6 +94,12 @@
     <None Include="Resources\tekkenmillioncolor.ico" />
     <Content Include="tekken.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FauskangerLib\FauskangerLib.csproj">
+      <Project>{b59713fd-c94b-40df-a415-b2ece0766c3e}</Project>
+      <Name>FauskangerLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

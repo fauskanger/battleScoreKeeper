@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekken5DarkRessurectionScoreKeeper", "Tekken5DarkRessurectionScoreKeeper\Tekken5DarkRessurectionScoreKeeper.csproj", "{8D180104-CD23-4FD6-B9E7-09757BA7E788}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FauskangerLib", "FauskangerLib\FauskangerLib.csproj", "{B59713FD-C94B-40DF-A415-B2ECE0766C3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{8D180104-CD23-4FD6-B9E7-09757BA7E788}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D180104-CD23-4FD6-B9E7-09757BA7E788}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D180104-CD23-4FD6-B9E7-09757BA7E788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59713FD-C94B-40DF-A415-B2ECE0766C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59713FD-C94B-40DF-A415-B2ECE0766C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59713FD-C94B-40DF-A415-B2ECE0766C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59713FD-C94B-40DF-A415-B2ECE0766C3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
