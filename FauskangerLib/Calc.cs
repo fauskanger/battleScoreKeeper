@@ -13,17 +13,15 @@ namespace FauskangerLib
             return (value <= highLimit && value >= lowLimit);
         }
 
-        static public bool isInRange(int value, int lowLimit, int highLimit, int[] exceptions)
+        static public bool isInRange(int value, int lowLimit, int highLimit, int[] omitValues)
         {
-            bool ret = isInRange(value,lowLimit,highLimit);
+            if (!isInRange(value,lowLimit,highLimit)) return false; // Out of range
 
-            if (!ret) return false; // Out of range
-
-            foreach (int e in exceptions) 
+            foreach (int omittedValue in omitValues) 
             {
-                if (value == e) return false; // Value equal to exceptions
+                if (value == omittedValue) return false; // Value equal to exceptions
             }
-            return ret;
+            return true; // In range and not found among exceptions
         }
 
 
