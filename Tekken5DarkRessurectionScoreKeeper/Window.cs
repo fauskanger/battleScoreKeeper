@@ -14,7 +14,7 @@ using FauskangerLib;
 
 namespace Tekken5DarkRessurectionScoreKeeper
 {
-    public partial class Form1 : Form
+    public partial class Window : Form
     {
 
 
@@ -22,11 +22,10 @@ namespace Tekken5DarkRessurectionScoreKeeper
         private int charImgWidth, charImgHeight;
         private int charIndex, charSelectedCol, charSelectedRow;
 
-        List<Player> playerList;
         Player LeftPlayer { set; get; }
         Player RightPlayer { set; get; }
 
-        public Form1()
+        public Window()
         {
             InitializeComponent();  
         }
@@ -46,9 +45,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
             charImgWidth = pbxCharacterSelect.Image.Width / charSelNumCols;
             charImgHeight = pbxCharacterSelect.Image.Height / charSelNumRows;
 
-            playerList = new List<Player>(2);
-            playerList.Add( LeftPlayer  = new Player("A") );
-            playerList.Add( RightPlayer = new Player("B") );
+            Controller.init();
 
         }
 
@@ -105,6 +102,15 @@ namespace Tekken5DarkRessurectionScoreKeeper
                     this.Close();
                     break;
             }
+        }
+
+        public void setLeftPlayer(Player player)
+        {
+            LeftPlayer = player;
+        }
+        public void setLeftPlayer(Player player)
+        {
+            RightPlayer = player;
         }
 
 

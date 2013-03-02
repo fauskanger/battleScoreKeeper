@@ -1,6 +1,6 @@
 ﻿namespace Tekken5DarkRessurectionScoreKeeper
 {
-    partial class Form1
+    partial class Window
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.lblLeftCharacter = new System.Windows.Forms.Label();
             this.pbxCharacterSelect = new System.Windows.Forms.PictureBox();
             this.lblRightCharacter = new System.Windows.Forms.Label();
@@ -158,7 +158,7 @@
             this.toolStripMenuItem4.Size = new System.Drawing.Size(125, 20);
             this.toolStripMenuItem4.Text = "toolStripMenuItem4";
             // 
-            // Form1
+            // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,7 +177,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Window";
             this.Text = "Tekken 5 Dark Resurrection Score Keeper";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
