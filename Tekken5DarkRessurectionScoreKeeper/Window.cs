@@ -22,12 +22,14 @@ namespace Tekken5DarkRessurectionScoreKeeper
         private int charImgWidth, charImgHeight;
         private int charIndex, charSelectedCol, charSelectedRow;
 
-        Player LeftPlayer { set; get; }
-        Player RightPlayer { set; get; }
+        public Player LeftPlayer { set; private get; }
+        public Player RightPlayer { set; get; }
+        Controller controller;
 
         public Window()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            controller = new Controller(this);
         }
         
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -45,7 +47,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
             charImgWidth = pbxCharacterSelect.Image.Width / charSelNumCols;
             charImgHeight = pbxCharacterSelect.Image.Height / charSelNumRows;
 
-            Controller.init();
+            controller.init();
 
         }
 
@@ -104,16 +106,11 @@ namespace Tekken5DarkRessurectionScoreKeeper
             }
         }
 
-        public void setLeftPlayer(Player player)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            LeftPlayer = player;
+            controller.PlayerList.Add(new Player());
         }
-        public void setLeftPlayer(Player player)
-        {
-            RightPlayer = player;
-        }
-
-
+        
 
         
     }
