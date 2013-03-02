@@ -97,6 +97,16 @@ namespace Tekken5DarkRessurectionScoreKeeper
             return Character.getCharacter(charIndex);
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            { 
+                case Keys.Escape:
+                    this.Close();
+                    break;
+            }
+        }
+
 
 
         

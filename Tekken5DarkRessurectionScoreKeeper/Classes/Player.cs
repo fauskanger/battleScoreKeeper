@@ -15,6 +15,7 @@ namespace Tekken5DarkRessurectionScoreKeeper.Classes
         {
             Name = name;
             SelectedCharacter = Characters.NONE;
+
         }
 
     }

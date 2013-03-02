@@ -34,12 +34,14 @@
             this.lblRightCharacter = new System.Windows.Forms.Label();
             this.lblRightPlayerName = new System.Windows.Forms.Label();
             this.lblLeftPlayerName = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCharacterSelect)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -95,35 +97,6 @@
             this.lblLeftPlayerName.TabIndex = 5;
             this.lblLeftPlayerName.Text = "Player 1";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox1,
-            this.toolStripTextBox1,
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 649);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1085, 27);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(125, 23);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -140,13 +113,57 @@
             this.panel2.Size = new System.Drawing.Size(530, 129);
             this.panel2.TabIndex = 9;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem4});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 658);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1085, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripSeparator1,
+            this.toolStripMenuItem3});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(76, 20);
+            this.toolStripMenuItem1.Text = "Add Player";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(104, 22);
+            this.toolStripMenuItem2.Text = "New..";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(101, 6);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(104, 22);
+            this.toolStripMenuItem3.Text = "Foo";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(125, 20);
+            this.toolStripMenuItem4.Text = "toolStripMenuItem4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1085, 676);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1085, 682);
             this.Controls.Add(this.lblRightPlayerName);
             this.Controls.Add(this.lblLeftPlayerName);
             this.Controls.Add(this.lblRightCharacter);
@@ -154,14 +171,16 @@
             this.Controls.Add(this.lblLeftCharacter);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Tekken 5 Dark Resurrection Score";
+            this.Text = "Tekken 5 Dark Resurrection Score Keeper";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCharacterSelect)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -177,12 +196,14 @@
         private System.Windows.Forms.Label lblRightCharacter;
         private System.Windows.Forms.Label lblRightPlayerName;
         private System.Windows.Forms.Label lblLeftPlayerName;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
     }
 }
 
