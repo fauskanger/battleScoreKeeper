@@ -1,5 +1,6 @@
 BattleScoreKeeper
 =================
+[ C# WinForm on .Net Framework 4.5 ]
 
 Initially started as an application to keep track of score in a tournament of Tekken 5: Dark Resurrection,
 but the 2nd goal is to make it easy to adapt for any similar one on one battle games.
