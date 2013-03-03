@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.lblLeftCharacter = new System.Windows.Forms.Label();
             this.pbxCharacterSelect = new System.Windows.Forms.PictureBox();
@@ -39,8 +40,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dBDataSetAll = new Tekken5DarkRessurectionScoreKeeper.DBDataSetAll();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.playerTableAdapter = new Tekken5DarkRessurectionScoreKeeper.DBDataSetAllTableAdapters.PlayerTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCharacterSelect)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLeftCharacter
@@ -135,6 +141,20 @@
             this.toolStripMenuItem4.Size = new System.Drawing.Size(125, 20);
             this.toolStripMenuItem4.Text = "toolStripMenuItem4";
             // 
+            // dBDataSetAll
+            // 
+            this.dBDataSetAll.DataSetName = "DBDataSetAll";
+            this.dBDataSetAll.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Player";
+            this.bindingSource1.DataSource = this.dBDataSetAll;
+            // 
+            // playerTableAdapter
+            // 
+            this.playerTableAdapter.ClearBeforeFill = true;
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +181,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxCharacterSelect)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,6 +200,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.BindingSource playerBindingSource;
+        private DBDataSetAll dBDataSetAll;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private DBDataSetAllTableAdapters.PlayerTableAdapter playerTableAdapter;
     }
 }
 

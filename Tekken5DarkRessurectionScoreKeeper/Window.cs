@@ -29,7 +29,6 @@ namespace Tekken5DarkRessurectionScoreKeeper
         public Window()
         {
             InitializeComponent();
-            controller = new Controller(this);
         }
         
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -41,6 +40,8 @@ namespace Tekken5DarkRessurectionScoreKeeper
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            controller = new Controller(this);
+         
             charSelNumCols = 12;
             charSelNumRows = 3;
 
