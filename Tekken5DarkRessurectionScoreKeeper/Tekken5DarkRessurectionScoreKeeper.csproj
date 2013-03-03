@@ -61,6 +61,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBDataSetAll.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SessionLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionLoad.Designer.cs">
+      <DependentUpon>SessionLoad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Window.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SessionLoad.resx">
+      <DependentUpon>SessionLoad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>

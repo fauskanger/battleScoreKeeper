@@ -22,7 +22,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
         private int charImgWidth, charImgHeight;
         private int charIndex, charSelectedCol, charSelectedRow;
 
-        public Player LeftPlayer { set; private get; }
+        public Player LeftPlayer { set; get; }
         public Player RightPlayer { set; get; }
         Controller controller;
 
@@ -77,10 +77,10 @@ namespace Tekken5DarkRessurectionScoreKeeper
             switch (e.Button)
             {
                 case MouseButtons.Left:
-                    setCharacterToPlayer(LeftPlayer, Character.getCharacter(charIndex));
+                    setCharacterToPlayer(LeftPlayer, getClickedCharacter());
                     break;
                 case MouseButtons.Right:
-                    setCharacterToPlayer(RightPlayer, Character.getCharacter(charIndex));
+                    setCharacterToPlayer(RightPlayer, getClickedCharacter());
                     break;
             }
 
