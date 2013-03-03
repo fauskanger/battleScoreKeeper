@@ -16,9 +16,11 @@ Tables:
  - Player
  - - id: uniqueidentifier
  - - name: nvarchar
+ 
  - Character
  - - id: uniqueidentifier
  - - name: nvarchar
+ 
  - Battle
  - - leftPlayer: uniqueidentifier
  - - rightPlayer: uniqueidentifier
@@ -27,6 +29,7 @@ Tables:
  - - leftCharacter: uniqueidentifier
  - - rightCharacter: uniqueidentifier
  - - session: uniqueidentifier
+ 
  - Session
  - - id: uniqueidentifier
  - - Name: nvarchar
