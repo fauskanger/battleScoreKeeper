@@ -10,27 +10,29 @@ Utilizes "sessions" to keep score of turnaments, so one may continue on a previo
 
 Total (inter-session) score for the individual player will also be available.
 
-Uses SQL Database Compact Edition to store data.
+Uses SQL Database Compact Edition to store data;
 
-Tables:
- - Player
- - - id: uniqueidentifier
- - - name: nvarchar
+<h3>Database tables:</h3>
+
+
+Player
+ - id: uniqueidentifier
+ - name: nvarchar
+
+Character
+ - id: uniqueidentifier
+ - name: nvarchar
+
+Battle
+ - leftPlayer: uniqueidentifier
+ - rightPlayer: uniqueidentifier
+ - winner: uniqueidentifier
+ - startTime: datetime
+ - leftCharacter: uniqueidentifier
+ - rightCharacter: uniqueidentifier
+ - session: uniqueidentifier
  
- - Character
- - - id: uniqueidentifier
- - - name: nvarchar
- 
- - Battle
- - - leftPlayer: uniqueidentifier
- - - rightPlayer: uniqueidentifier
- - - winner: uniqueidentifier
- - - startTime: datetime
- - - leftCharacter: uniqueidentifier
- - - rightCharacter: uniqueidentifier
- - - session: uniqueidentifier
- 
- - Session
- - - id: uniqueidentifier
- - - Name: nvarchar
- - - start: datetime
+Session
+ - id: uniqueidentifier
+ - Name: nvarchar
+ - start: datetime
