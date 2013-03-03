@@ -1,12 +1,12 @@
 BattleScoreKeeper
 =================
 
-Initially started as an application to keep track of score in a turnament of Tekken 5: Dark Resurrection,
+Initially started as an application to keep track of score in a tournament of Tekken 5: Dark Resurrection,
 but the 2nd goal is to make it easy to adapt for any similar one on one battle games.
 
 The program keeps track of players, which characters they choose, number of battles, and wins.
 
-Utilizes "sessions" to keep score of turnaments, so one may continue on a previous session at any time.
+Utilizes "sessions" to keep score of tournaments, so one may continue on a previous session at any time.
 
 Total (inter-session) score for the individual player will also be available.
 
