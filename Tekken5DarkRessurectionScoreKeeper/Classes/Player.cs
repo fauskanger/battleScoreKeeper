@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using FauskangerLib;
+
 namespace Tekken5DarkRessurectionScoreKeeper.Classes
 {
     public class Player
@@ -13,7 +15,7 @@ namespace Tekken5DarkRessurectionScoreKeeper.Classes
 
         static public Player createNewPlayer(bool forceComplete = false)
         {
-            string name = init(forceComplete);
+            string name = createPlayerName(forceComplete);
             if (name != null)
                 return new Player(name);
             return null;
@@ -21,7 +23,7 @@ namespace Tekken5DarkRessurectionScoreKeeper.Classes
 
         static public Player createNewPlayer(string name)
         {
-            name = init(false, name);
+            name = createPlayerName(false, name);
             if (name != null)
                 return new Player(name);
             return null;
@@ -46,12 +48,13 @@ namespace Tekken5DarkRessurectionScoreKeeper.Classes
 
             if (forceComplete)
             {
-                while (tmpName == null || tmpName.Length <= 0)
+                while (Misc.isNullOrEmpty(tmpName))
                     tmpName = getPlayerNameFromInput();
             }
             else
             {
                 tmpName = getPlayerNameFromInput();
+                tmpName = Misc.isNullOrEmpty(tmpName)? null: tmpName;
             }
 
             return tmpName;
@@ -59,9 +62,9 @@ namespace Tekken5DarkRessurectionScoreKeeper.Classes
         }
 
 
-        static private string init(bool forceComplete, string tmpName = "")
+        static private string createPlayerName(bool forceComplete, string tmpName = null)
         {
-            return (tmpName != "" && tmpName != null) ? tmpName : getPlayerName(forceComplete);
+            return Misc.isNullOrEmpty(tmpName) ? getPlayerName(forceComplete) : tmpName;
         }
 
     }
