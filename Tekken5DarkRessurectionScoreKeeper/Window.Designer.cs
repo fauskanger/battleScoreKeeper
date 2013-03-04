@@ -49,11 +49,6 @@
             this.tsmNewGame = new System.Windows.Forms.ToolStripMenuItem();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpgFront = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.PlayerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Victories = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Defeats = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Draw = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pbxCharacterSelect)).BeginInit();
             this.panelLeft.SuspendLayout();
             this.panelRight.SuspendLayout();
@@ -64,7 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
             this.panelMain.SuspendLayout();
             this.tcMain.SuspendLayout();
-            this.tpgFront.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLeftCharacter
@@ -213,7 +207,6 @@
             // 
             // tpgFront
             // 
-            this.tpgFront.Controls.Add(this.listView1);
             this.tpgFront.Location = new System.Drawing.Point(4, 22);
             this.tpgFront.Name = "tpgFront";
             this.tpgFront.Padding = new System.Windows.Forms.Padding(3);
@@ -221,19 +214,6 @@
             this.tpgFront.TabIndex = 0;
             this.tpgFront.Text = "tabPage1";
             this.tpgFront.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.PlayerName,
-            this.Victories,
-            this.Defeats,
-            this.Draw});
-            this.listView1.Location = new System.Drawing.Point(95, 89);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 97);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // Window
             // 
@@ -266,7 +246,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.tcMain.ResumeLayout(false);
-            this.tpgFront.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,11 +273,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmNewGame;
         public System.Windows.Forms.TabPage tpgFront;
         public System.Windows.Forms.TabControl tcMain;
-        private System.Windows.Forms.ColumnHeader PlayerName;
-        private System.Windows.Forms.ColumnHeader Victories;
-        private System.Windows.Forms.ColumnHeader Defeats;
-        private System.Windows.Forms.ColumnHeader Draw;
-        public System.Windows.Forms.ListView listView1;
     }
 }
 

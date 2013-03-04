@@ -110,7 +110,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
             TabPage tp = mainWindow.tcMain.TabPages[p.Name];
             tp.BackColor = System.Drawing.Color.White;
 
-            mainWindow.listView1.Items.Add(p.Name);
+           // mainWindow.listView1.Items.Add(p.Name);
         }
 
         internal void showWindow(Form win)
