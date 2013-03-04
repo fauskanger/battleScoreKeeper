@@ -42,11 +42,11 @@ namespace Tekken5DarkRessurectionScoreKeeper.Classes
 
         static private string getPlayerName(bool forceComplete)
         {
-            string tmpName = "";
+            string tmpName = null;
 
             if (forceComplete)
             {
-                while (tmpName.Length <= 0)
+                while (tmpName == null || tmpName.Length <= 0)
                     tmpName = getPlayerNameFromInput();
             }
             else
