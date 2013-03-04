@@ -40,6 +40,8 @@ namespace Tekken5DarkRessurectionScoreKeeper
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dBDataSetAll1.Session' table. You can move, or remove it, as needed.
+            this.sessionTableAdapter.Fill(this.dBDataSetAll1.Session);
             controller = new Controller(this);
          
             charSelNumCols = 12;
@@ -49,6 +51,9 @@ namespace Tekken5DarkRessurectionScoreKeeper
             charImgHeight = pbxCharacterSelect.Image.Height / charSelNumRows;
 
             controller.init();
+
+          //  if (controller.sessionLoadFrame != null)
+            //    controller.sessionLoadFrame.BringToFront();
 
         }
 
@@ -109,7 +114,7 @@ namespace Tekken5DarkRessurectionScoreKeeper
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            controller.PlayerList.Add(new Player());
+            controller.createNewPlayer();
         }
         
 

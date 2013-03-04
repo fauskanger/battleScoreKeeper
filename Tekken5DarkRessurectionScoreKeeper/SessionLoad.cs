@@ -12,9 +12,23 @@ namespace Tekken5DarkRessurectionScoreKeeper
 {
     public partial class SessionLoad : Form
     {
+
+        Controller controller;
+
         public SessionLoad()
         {
             InitializeComponent();
         }
+
+        public SessionLoad(Controller controller)
+        {
+            this.controller = controller;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

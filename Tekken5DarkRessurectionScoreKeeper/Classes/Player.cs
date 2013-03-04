@@ -11,23 +11,57 @@ namespace Tekken5DarkRessurectionScoreKeeper.Classes
         public string Name {get; set;}
         public Characters SelectedCharacter { get; set; }
 
-        public Player(string name)
+        static public Player createNewPlayer(bool forceComplete = false)
+        {
+            string name = init(forceComplete);
+            if (name != null)
+                return new Player(name);
+            return null;
+        }
+
+        static public Player createNewPlayer(string name)
+        {
+            name = init(false, name);
+            if (name != null)
+                return new Player(name);
+            return null;
+        }
+
+        private Player(string name)
         {
             Name = name;
             SelectedCharacter = Characters.NONE;
+        }
+
+
+        static private string getPlayerNameFromInput()
+        {
+            Random random = new Random();
+            return Microsoft.VisualBasic.Interaction.InputBox("Enter player name:", "New player ", "YourPlayerName" + random.Next(100, 999).ToString());
+        }
+
+        static private string getPlayerName(bool forceComplete)
+        {
+            string tmpName = "";
+
+            if (forceComplete)
+            {
+                while (tmpName.Length <= 0)
+                    tmpName = getPlayerNameFromInput();
+            }
+            else
+            {
+                tmpName = getPlayerNameFromInput();
+            }
+
+            return tmpName;
 
         }
 
-        public Player()
+
+        static private string init(bool forceComplete, string tmpName = "")
         {
-            Random random = new Random();
-            string tmpName = "";
-            while (tmpName.Length <= 0)
-                tmpName = Microsoft.VisualBasic.Interaction.InputBox("Enter player name:", "New player ", "YourPlayerName" + random.Next(100,999).ToString());
-
-            Name = tmpName;
-            SelectedCharacter = Characters.NONE;
-
+            return (tmpName != "" && tmpName != null) ? tmpName : getPlayerName(forceComplete);
         }
 
     }
